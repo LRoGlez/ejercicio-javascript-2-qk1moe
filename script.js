@@ -68,4 +68,6 @@ function onLoad() {
 
   thChildList2 = secChildList2.nextSibling;
   thChildList2.append(button5);
+
+  button5.setAttribute("disabled", "");
 }
