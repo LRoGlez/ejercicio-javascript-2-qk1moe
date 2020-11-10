@@ -9,7 +9,28 @@
 // Suerte!
 
 window.addEventListener("load", onLoad);
+let iterar;
 
 function onLoad() {
-  console.log("hi");
+  let spanSelected = document.querySelector(".selected");
+  console.log(spanSelected);
+  getParent = spanSelected.parentNode;
+  console.log(getParent);
+  goToUl = getParent.parentNode;
+  console.log(goToUl);
+  getAllChild = goToUl.children;
+  console.log(getAllChild);
+
+  //poner clase element-i
+  for (let i = 0; i < getAllChild.length; i++) {
+    getAllChild[i].classList.add("element-" + (i + 1));
+  }
+  let getEvens = document.querySelectorAll("#list1 :nth-child(even)");
+
+  console.log(getEvens);
+
+  //eliminar pares
+  for (let i = 0; i < getEvens.length; i++) {
+    getEvens[i].remove();
+  }
 }
