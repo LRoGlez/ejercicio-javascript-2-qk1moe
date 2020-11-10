@@ -33,4 +33,39 @@ function onLoad() {
   for (let i = 0; i < getEvens.length; i++) {
     getEvens[i].remove();
   }
+  //crear lista 2
+  let crearList = document.querySelector("#list2");
+
+  console.log(crearList);
+
+  let item = document.createElement("li");
+  let item2 = document.createElement("li");
+  let item3 = document.createElement("li");
+
+  crearList.appendChild(item);
+  crearList.appendChild(item2);
+  crearList.appendChild(item3);
+
+  //crear botones
+  let button1 = document.createElement("button");
+  button1.type = "button";
+  button1.innerText = "texto ejemplo 1";
+
+  let button3 = document.createElement("button");
+  button3.type = "button";
+  button3.innerText = "texto ejemplo 3";
+
+  let button5 = document.createElement("button");
+  button5.type = "button";
+  button5.innerText = "texto ejemplo 5";
+
+  //insertar botones
+  firstChildList2 = crearList.firstChild;
+  firstChildList2.append(button1);
+
+  secChildList2 = firstChildList2.nextSibling;
+  secChildList2.append(button3);
+
+  thChildList2 = secChildList2.nextSibling;
+  thChildList2.append(button5);
 }
